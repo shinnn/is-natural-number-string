@@ -61,7 +61,7 @@ Determine whether this library regards `0` as a natural number or not.
 
 ```javascript
 isNaturalNumberString('0'); //=> false
-isNaturalNumberString('0', {includeZero: true}); //=> false
+isNaturalNumberString('0', {includeZero: true}); //=> true
 ```
 
 ## License
