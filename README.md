@@ -25,7 +25,7 @@ Unlike [`is-natural-number`](https://github.com/shinnn/is-natural-number.js), `i
 npm install is-natural-number-string
 ```
 
-#### [bower](http://bower.io/)
+#### [bower](https://bower.io/)
 
 ```
 bower install is-natural-number-string
@@ -46,6 +46,10 @@ Return: `Boolean`
 ```javascript
 isNaturalNumberString('15'); //=> true
 isNaturalNumberString('4.3'); //=> false
+
+isNaturalNumberString('1'); //=> true
+isNaturalNumberString('1.0'); //=> true
+isNaturalNumberString('1.00000000000000000000000000'); //=> true
 
 // non-string
 isNaturalNumberString(15); //=> false

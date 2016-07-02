@@ -15,6 +15,12 @@ function runTest(description, isNaturalNumberString) {
     );
 
     t.strictEqual(
+      isNaturalNumberString('12.0'),
+      true,
+      'should ignore .0000...'
+    );
+
+    t.strictEqual(
       isNaturalNumberString(String(Number.MAX_SAFE_INTEGER).repeat(2)),
       true,
       'should accept a string that represents a number larger than the maximum safe integer in JavaScript.'
@@ -48,6 +54,12 @@ function runTest(description, isNaturalNumberString) {
       isNaturalNumberString('0', {includeZero: true}),
       true,
       'should regard 0 as a natural number if `includeZero` option is enabled.'
+    );
+
+    t.strictEqual(
+      isNaturalNumberString('0.00', {includeZero: true}),
+      true,
+      'should regard 0.0000... as a natural number if `includeZero` option is enabled.'
     );
 
     t.strictEqual(

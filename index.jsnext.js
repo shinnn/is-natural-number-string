@@ -17,10 +17,10 @@ export default function isNaturalNumberString(str, option) {
       }
 
       if (option.includeZero) {
-        return /^(-?0|[1-9]\d*)$/.test(str);
+        return /^(-?0|[1-9]\d*)(\.0+)?$/.test(str);
       }
     }
   }
 
-  return /^[1-9]\d*$/.test(str);
+  return /^[1-9]\d*(\.0+)?$/.test(str);
 }
