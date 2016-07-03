@@ -1,6 +1,6 @@
 {
   "name": "is-natural-number-string",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Check if a given value is a string that represents natural number",
   "repository": "shinnn/is-natural-number-string",
   "author": "Shinnosuke Watanabe (https://github.com/shinnn)",
